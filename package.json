@@ -33,7 +33,12 @@
     "build:dev": "webpack --progress --colors --set-env-NODE_ENV=development",
     "build:prod": "webpack --progress --colors --set-env-NODE_ENV=production",
     "build": "npm run build:dev; npm run build:prod",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "test": "echo soon some tests ;)",
+    "prepublish": "npm run build",
+    "postpublish": "",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "description": "Angular-Formly plugin which outputs ionic compatible form fields.",
   "peerDependencies": {

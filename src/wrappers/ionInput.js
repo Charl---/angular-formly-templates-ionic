@@ -2,8 +2,8 @@ export default ngModule => {
   ngModule.config(addWrappers);
 
   const template = `<ion-input class="item {{ to.inputClass }}"
-                               ng-class="{ 'has-error' : options.formControl.$invalid  && options.formControl.$touched,
-                                           'is-valid' : options.formControl.$valid  && options.formControl.$touched}">
+                               ng-class="{ 'has-error' : options.formControl.$invalid,
+                                           'is-valid' : options.formControl.$valid}">
                       <i ng-if="::to.icon" class="icon" ng-class="::to.icon"></i>
                       <ion-label ng-if="::to.label" ng-bind="::to.label"></ion-label>
                       <formly-transclude></formly-transclude>

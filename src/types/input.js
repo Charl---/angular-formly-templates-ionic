@@ -3,14 +3,18 @@ export default ngModule => {
 
   const template = `<input type="{{::to.type}}" ng-model="model[options.key]"/>`;
 
-  function addInputType(formlyConfigProvider) {
+  if(process.env.NODE_ENV === 'test') {
+    require('./input.spec');
+  }
+
+  function addInputType(formlyConfigProvider, inputTypes) {
     formlyConfigProvider.setType({
       name: 'input',
       template,
       wrapper: ['ionInput'],
       apiCheck: check => ({
         templateOptions: {
-          type: check.string
+          type: check.oneOf(inputTypes)
         }
       })
     })

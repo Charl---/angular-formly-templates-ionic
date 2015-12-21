@@ -1,5 +1,6 @@
 /* eslint no-console:0 */
 import angular from '../angular-fix'
+import { compileDirective } from '../test.utils'
 
 describe('checkbox type', ()=>{
   let scope;
@@ -8,43 +9,24 @@ describe('checkbox type', ()=>{
 
   beforeEach(angular.mock.inject(($compile, $rootScope)=>{
     scope = $rootScope.$new();
-    $compile('<formly-form model="model" fields="fields" options="options" form="form"></formly-form>')(scope);
-    spyOn(console,'warn').and.callThrough();
-    scope.model = {};
-    scope.options = {};
+    compileDirective(scope, $compile, 'checkbox');
   }));
 
-  it('should be ok', ()=>{
-    scope.fields =  [{
-      type: 'checkbox',
-      key: 'myCheckbox',
-      templateOptions: {
-        label: 'myCheckbox'
-      }
-    }];
+  it('should be ok when label is a string', ()=>{
+    scope.fields[0].templateOptions.label = 'myCheckbox';
     scope.$digest();
     expect(console.warn).not.toHaveBeenCalled()
   });
 
-  it('should log some warn when bad label type', ()=>{
-    scope.fields =  [{
-      type: 'checkbox',
-      key: 'myCheckbox',
-      templateOptions: {
-        label: 3
-      }
-    }];
+  it('should log some warn when label is a number', ()=>{
+    scope.fields[0].templateOptions.label = 3;
     scope.$digest();
     expect(console.warn).toHaveBeenCalled()
   });
 
-  it('should log some warn when no label specified', ()=>{
-    scope.fields =  [{
-      type: 'checkbox',
-      key: 'myCheckbox'
-    }];
+  it('should log some warn when label is a boolean', ()=>{
+    scope.fields[0].templateOptions.label = false;
     scope.$digest();
     expect(console.warn).toHaveBeenCalled()
-  })
-
+  });
 });

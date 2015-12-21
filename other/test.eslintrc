@@ -9,7 +9,8 @@
     "jasmine": true
   },
   "globals": {
-    "VERSION": true
+    "VERSION": true,
+    "spyOn": true
   },
   "rules": {
 

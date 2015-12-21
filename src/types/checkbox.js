@@ -16,7 +16,7 @@ export default ngModule => {
       wrapper: [],
       apiCheck: check => ({
         templateOptions: {
-          label: check.string,
+          label: check.string.optional,
           checked: check.bool.optional
         }
       })

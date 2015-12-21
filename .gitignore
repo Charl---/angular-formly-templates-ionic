@@ -13,6 +13,7 @@ pids
 logs
 results
 dist
+coverage
 
 node_modules
 bower_components

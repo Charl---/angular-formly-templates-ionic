@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Ionic-formly</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <link rel="stylesheet" href="../node_modules/ionic-sdk/release/css/ionic.css"/>
+  <style>
+    .item.has-error {
+      border-left: 2px solid red;
+      border-right: 2px solid red;
+    }
+    .item.is-valid {
+      border-left: 2px solid green;
+      border-right: 2px solid green;
+    }
+    .formly-ionic-errors {
+      margin: 5px 0
+    }
+    .formly-ionic-errors ng-message{
+      padding: 2px 0 2px 16px;
+      color: red;
+    }
+
+  </style>
+</head>
+<body ng-app="app" ng-controller="MainController as vm" ng-cloak>
+
+<ion-content>
+  <h1 class="text-center">angular-formly-templates-ionic</h1>
+  <ion-list>
+    <formly-form model="vm.model" fields="vm.fields" options="vm.options" form="vm.form"></formly-form>
+  </ion-list>
+  <div class="row">
+    <h2>Model</h2>
+    <pre>{{vm.model | json}}</pre>
+  </div>
+  <div class="row">
+    <h2>Form</h2>
+    <pre>{{vm.form | json}}</pre>
+  </div>
+  <div class="row">
+    <h2>Original Fields</h2>
+    <pre>{{vm.originalFields | json}}</pre>
+  </div>
+  <div class="row">
+    <h2>Options</h2>
+    <pre>{{vm.options}}</pre>
+  </div>
+</ion-content>
+
+<script type="text/ng-template" id="email-errors">
+  <ng-message  when="required">
+    <i class="ion-information-circled"></i>
+    This field is required
+  </ng-message>
+  <ng-message when="email">
+    <i class="ion-information-circled"></i>
+    Invalid email
+  </ng-message>
+</script>
+
+<script type="text/ng-template" id="string-errors">
+  <ng-message when="required">
+    <i class="ion-information-circled"></i>
+    Required
+  </ng-message>
+  <ng-message when="maxlength">
+    <i class="ion-information-circled"></i>
+    too long !!!
+  </ng-message>
+</script>
+
+
+<script src="../node_modules/api-check/dist/api-check.js"></script>
+
+<script src="../node_modules/ionic-sdk/release/js/ionic.bundle.js"></script>
+<script src="../node_modules/angular-formly/dist/formly.js"></script>
+<script src="../node_modules/angular-messages/angular-messages.js"></script>
+<script src="../dist/formlyIonic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

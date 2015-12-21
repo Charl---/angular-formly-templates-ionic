@@ -7,7 +7,8 @@
   "contributors": [
     "Astrism <astrisms@gmail.com>",
     "Kent C. Dodds <kent@doddsfamily.us>",
-    "Mike Hartington <mikehartington@gmail.com>"
+    "Mike Hartington <mikehartington@gmail.com>",
+    "Charles Jacquin <charles.jacquin@ambient-it.net>"
   ],
   "main": "dist/angular-formly-templates-ionic.js",
   "description": "Angular-Formly plugin for Ionic Framework.",

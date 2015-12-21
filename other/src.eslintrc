@@ -1,0 +1,16 @@
+
+{
+  "extends": "defaults/configurations/eslint",
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "VERSION": true
+  },
+  "rules": {
+
+  }
+}

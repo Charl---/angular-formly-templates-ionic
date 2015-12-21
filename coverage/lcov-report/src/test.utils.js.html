@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/test.utils.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> test.utils.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.56% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>16/45</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">22.22% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">34.09% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>15/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* eslint no-console:0 */
+'use strict';
+&nbsp;
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.shouldWarn = shouldWarn;
+exports.shouldNotWarn = shouldNotWarn;
+exports.shouldWarnWithLog = shouldWarnWithLog;
+exports.customEventPolyfill = customEventPolyfill;
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? <span class="branch-0 cbranch-no" title="branch not covered" >obj </span>: { 'default': obj }; }
+&nbsp;
+var _lodash = require('lodash');
+&nbsp;
+var _lodash2 = _interopRequireDefault(_lodash);
+&nbsp;
+<span class="fstat-no" title="function not covered" >function shouldWarn(match, test) {</span>
+<span class="cstat-no" title="statement not covered" >  var originalWarn = console.warn;</span>
+<span class="cstat-no" title="statement not covered" >  var calledArgs = undefined;</span>
+<span class="cstat-no" title="statement not covered" >  console.warn = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    calledArgs = arguments;</span>
+  };
+<span class="cstat-no" title="statement not covered" >  test();</span>
+<span class="cstat-no" title="statement not covered" >  expect(calledArgs, 'expected warning and there was none').to.exist;</span>
+<span class="cstat-no" title="statement not covered" >  expect(Array.prototype.join.call(calledArgs, ' ')).to.match(match);</span>
+<span class="cstat-no" title="statement not covered" >  console.warn = originalWarn;</span>
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function shouldNotWarn(test) {</span>
+<span class="cstat-no" title="statement not covered" >  var originalWarn = console.warn;</span>
+<span class="cstat-no" title="statement not covered" >  var calledArgs = undefined;</span>
+<span class="cstat-no" title="statement not covered" >  console.warn = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    calledArgs = arguments;</span>
+  };
+<span class="cstat-no" title="statement not covered" >  test();</span>
+<span class="cstat-no" title="statement not covered" >  if (calledArgs) {</span>
+<span class="cstat-no" title="statement not covered" >    console.log(calledArgs);</span>
+<span class="cstat-no" title="statement not covered" >    throw new Error('Expected no warning, but there was one', calledArgs);</span>
+  }
+<span class="cstat-no" title="statement not covered" >  console.warn = originalWarn;</span>
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function shouldWarnWithLog($log, logArgs, test) {</span>
+  /* eslint no-console:0 */
+<span class="cstat-no" title="statement not covered" >  test();</span>
+<span class="cstat-no" title="statement not covered" >  expect($log.warn.logs, '$log should have only been called once').to.have.length(1);</span>
+<span class="cstat-no" title="statement not covered" >  var log = $log.warn.logs[0];</span>
+<span class="cstat-no" title="statement not covered" >  _lodash2['default'].each(logArgs, <span class="fstat-no" title="function not covered" >function (arg, index) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (_lodash2['default'].isRegExp(arg)) {</span>
+<span class="cstat-no" title="statement not covered" >      expect(log[index]).to.match(arg);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      expect(log[index]).to.equal(arg);</span>
+    }
+  });
+}
+&nbsp;
+function customEventPolyfill() {
+  var CustomEvent = <span class="fstat-no" title="function not covered" >function CustomEvent(event, params) {</span>
+<span class="cstat-no" title="statement not covered" >    var evt;</span>
+<span class="cstat-no" title="statement not covered" >    params = params || {</span>
+      bubbles: false,
+      cancelable: false,
+      detail: undefined
+    };
+<span class="cstat-no" title="statement not covered" >    evt = document.createEvent("CustomEvent");</span>
+<span class="cstat-no" title="statement not covered" >    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);</span>
+<span class="cstat-no" title="statement not covered" >    return evt;</span>
+  };
+&nbsp;
+  CustomEvent.prototype = window.Event.prototype;
+&nbsp;
+  window.CustomEvent = CustomEvent;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 21 2015 12:13:00 GMT+0100 (CET)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

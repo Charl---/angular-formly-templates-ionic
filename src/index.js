@@ -8,9 +8,11 @@ const ngModule = angular.module(ngModuleName, [
   'ngMessages'
 ]);
 
-const wrappers = require.context('./wrappers', true, /.js$/);
-const types = require.context('./types', true, /.js$/);
-const directives = require.context('./directives', true, /.js$/);
+
+//todo do something for this regex
+const wrappers = require.context('./wrappers', true, /^[^.]+$|\.(?!(spec.js)$)([^.js]+$)/);
+const types = require.context('./types', true, /^[^.]+$|\.(?!(spec.js)$)([^.js]+$)/);
+const directives = require.context('./directives', true, /^[^.]+$|\.(?!(spec.js)$)([^.js]+$)/);
 
 ngModule.constant(
   'formlyIonicApiCheck',

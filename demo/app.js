@@ -13,6 +13,15 @@
 
     vm.fields = [
       {
+        type: 'file',
+        key: 'file',
+        templateOptions: {
+          label: 'pick me !!!!',
+          accept: 'image/*',
+          multiple: true
+        }
+      },
+      {
         type: 'checkbox',
         key: 'myCheckbox',
         templateOptions: {

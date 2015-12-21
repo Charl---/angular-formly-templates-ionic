@@ -10,6 +10,7 @@ const ngModule = angular.module(ngModuleName, [
 
 const wrappers = require.context('./wrappers', true, /.js$/);
 const types = require.context('./types', true, /.js$/);
+const directives = require.context('./directives', true, /.js$/);
 
 ngModule.constant(
   'formlyIonicApiCheck',
@@ -31,6 +32,11 @@ requireAll(types)
   .forEach(typeFactory =>{
     typeFactory(ngModule)
   });
+
+requireAll(directives)
+    .forEach(directiveFactory =>{
+      directiveFactory(ngModule)
+    });
 
 
 function requireAll(requireContext) {

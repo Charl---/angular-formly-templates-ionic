@@ -4,8 +4,7 @@ import apiCheck from 'api-check'
 const ngModuleName = 'formlyIonic';
 
 const ngModule = angular.module(ngModuleName, [
-  'formly',
-  'ngMessages'
+  'formly'
 ]);
 
 

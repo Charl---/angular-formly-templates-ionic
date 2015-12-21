@@ -66,10 +66,7 @@
           required: true,
           placeholder: 'standard input (email)',
           type: 'email',
-          inputClass: 'item-input',
-          validation:{
-            templateUrl: 'email-errors'
-          }
+          inputClass: 'item-input'
         }
       },
       {
@@ -81,10 +78,7 @@
           label: 'with icon',
           required: true,
           placeholder: 'with icon',
-          type: 'text',
-          validation:{
-            templateUrl: 'string-errors'
-          }
+          type: 'text'
         }
       },
       {
@@ -97,13 +91,7 @@
           minlength: 2,
           placeholder: 'floating label',
           type: 'text',
-          inputClass: 'item-input item-floating-label',
-          validation:{
-            templateUrl: 'string-errors',
-            messages: {
-              maxlength: 'tooo long'
-            }
-          }
+          inputClass: 'item-input item-floating-label'
         }
       },
       {

@@ -3,10 +3,6 @@ export default ngModule =>{
 
   const template = `<input type="file" ng-model="model[options.key]" accept="{{ ::to.accept }}"  file-reader/>`;
 
-  if(process.env.NODE_ENV === 'test') {
-    require('./file.spec');
-  }
-
   function addFileType(formlyConfigProvider){
     formlyConfigProvider.setType({
       name: 'file',

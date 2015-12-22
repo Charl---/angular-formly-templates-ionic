@@ -3,10 +3,6 @@ export default ngModule => {
 
   const template = `<input type="{{::to.type}}" ng-model="model[options.key]"/>`;
 
-  if(process.env.NODE_ENV === 'test') {
-    require('./input.spec');
-  }
-
   function addInputType(formlyConfigProvider, inputTypes) {
     formlyConfigProvider.setType({
       name: 'input',

@@ -5,10 +5,6 @@ export default ngModule => {
                       {{ to.label }}
                     </ion-checkbox>`;
 
-  if(process.env.NODE_ENV === 'test') {
-    require('./checkbox.spec');
-  }
-
   function addCheckboxType(formlyConfigProvider) {
     formlyConfigProvider.setType({
       name: 'checkbox',

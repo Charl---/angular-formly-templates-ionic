@@ -50,34 +50,10 @@
   </div>
 </ion-content>
 
-<script type="text/ng-template" id="email-errors">
-  <ng-message  when="required">
-    <i class="ion-information-circled"></i>
-    This field is required
-  </ng-message>
-  <ng-message when="email">
-    <i class="ion-information-circled"></i>
-    Invalid email
-  </ng-message>
-</script>
-
-<script type="text/ng-template" id="string-errors">
-  <ng-message when="required">
-    <i class="ion-information-circled"></i>
-    Required
-  </ng-message>
-  <ng-message when="maxlength">
-    <i class="ion-information-circled"></i>
-    too long !!!
-  </ng-message>
-</script>
-
-
 <script src="../node_modules/api-check/dist/api-check.js"></script>
 
 <script src="../node_modules/ionic-sdk/release/js/ionic.bundle.js"></script>
 <script src="../node_modules/angular-formly/dist/formly.js"></script>
-<script src="../node_modules/angular-messages/angular-messages.js"></script>
 <script src="../dist/formlyIonic.js"></script>
 <script src="app.js"></script>
 </body>

@@ -2,10 +2,6 @@ export default ngModule =>{
 
   ngModule.directive('fileReader', fileReaderDirective);
 
-  if(process.env.NODE_ENV === 'test') {
-    require('./fileReader.spec');
-  }
-
   function fileReaderDirective($q, $window) {
     const slice = Array.prototype.slice;
 

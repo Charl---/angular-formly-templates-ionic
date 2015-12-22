@@ -1,6 +1,6 @@
 /* eslint no-console:0 */
-import angular from '../angular-fix'
-import { compileDirective } from '../test.utils'
+import angular from '../../angular-fix'
+import { compileDirective } from '../../test.utils'
 
 describe('file type', ()=>{
   let scope;

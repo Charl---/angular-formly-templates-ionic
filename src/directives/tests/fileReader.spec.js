@@ -1,6 +1,6 @@
 /* eslint no-console:0 */
-import angular from '../angular-fix'
-import { customEventPolyfill } from '../test.utils'
+import angular from '../../angular-fix'
+import { customEventPolyfill } from '../../test.utils.js'
 
 describe('fileReader directive', () =>{
   let scope, element, div, windowMock;

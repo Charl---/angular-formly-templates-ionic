@@ -7,10 +7,14 @@ const ngModule = angular.module(ngModuleName, [
   'formly'
 ]);
 
-//todo do something for this regex
-const wrappers = require.context('./wrappers', true, /^[^.]+$|\.(?!(spec.js)$)([^.js]+$)/);
-const types = require.context('./types', true, /^[^.]+$|\.(?!(spec.js)$)([^.js]+$)/);
-const directives = require.context('./directives', true, /^[^.]+$|\.(?!(spec.js)$)([^.js]+$)/);
+const wrappers = require.context('./wrappers', false, /.js/);
+const types = require.context('./types', false, /.js/);
+const directives = require.context('./directives', false, /.js/);
+
+if(process.env.NODE_ENV === 'test'){
+  requireAll(require.context('./directives/tests', false, /.spec.js/));
+  requireAll(require.context('./types/tests', false, /.spec.js/));
+}
 
 ngModule.constant(
   'formlyIonicApiCheck',

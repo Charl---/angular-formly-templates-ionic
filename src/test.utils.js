@@ -3,9 +3,7 @@ export function initFields(type){
     {
       type: type,
       key: 'testKey',
-      templateOptions: {
-
-      }
+      templateOptions: {}
     }
   ]
 }

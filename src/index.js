@@ -25,23 +25,6 @@ ngModule.constant(
   })
 );
 
-ngModule.constant(
-  'inputTypes', [
-    'text',
-    'email',
-    'search',
-    'number',
-    'url',
-    'tel',
-    'color',
-    'date',
-    'datetime',
-    'time',
-    'month',
-    'week'
-  ]
-);
-
 ngModule.constant('formlyIonicVersion', VERSION);
 
 requireAll(wrappers)

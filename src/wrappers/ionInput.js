@@ -1,7 +1,9 @@
+import { inputClasses } from '../config'
+
 export default ngModule => {
   ngModule.config(addWrappers);
 
-  const template = `<ion-input class="item {{ to.inputClass }}"
+  const template = `<ion-input class="item item-input {{ ::to.inputClass }}"
                                ng-class="{ 'has-error' : options.formControl.$invalid,
                                            'is-valid' : options.formControl.$valid}">
                       <i ng-if="::to.icon" class="icon" ng-class="::to.icon"></i>
@@ -16,7 +18,7 @@ export default ngModule => {
         template,
         apiCheck: check => ({
           templateOptions: {
-            inputClass: check.string.optional,
+            inputClass: check.oneOf(inputClasses).optional,
             icon: check.string.optional,
             label: check.string.optional
           }

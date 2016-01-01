@@ -32,9 +32,8 @@
         type: 'toggle',
         key: 'myToggle',
         templateOptions: {
-          inputClass: 'toggle-positive',
           label: 'myToggle',
-          theme: 'positive'
+          theme: 'primary'
         }
       },
       {
@@ -65,15 +64,13 @@
           label: 'standard input (email)',
           required: true,
           placeholder: 'standard input (email)',
-          type: 'email',
-          inputClass: 'item-input'
+          type: 'email'
         }
       },
       {
         type: 'input',
         key: 'myIcon',
         templateOptions: {
-          inputClass: 'item-input',
           icon: 'ion-person',
           label: 'with icon',
           required: true,
@@ -91,7 +88,7 @@
           minlength: 2,
           placeholder: 'floating label',
           type: 'text',
-          inputClass: 'item-input item-floating-label'
+          inputClass: 'item-floating-label'
         }
       },
       {
@@ -102,7 +99,7 @@
           required: true,
           placeholder: 'stacked label',
           type: 'tel',
-          inputClass: 'item-input item-stacked-label'
+          inputClass: 'item-stacked-label'
         }
       },
       {
@@ -114,7 +111,8 @@
           step:5,
           iconLeft: 'ion-volume-low',
           iconRight: 'ion-volume-high',
-          inputClass: 'range range-positive'
+          inputClass: 'range',
+          theme: 'primary'
         }
       },
       {
@@ -131,8 +129,7 @@
         key: 'mySearch',
         templateOptions: {
           icon: 'ion-search placeholder-icon',
-          type: 'search',
-          inputClass: 'item-input'
+          type: 'search'
         }
       },
       {

@@ -1,3 +1,5 @@
+import  {  themes } from '../config'
+
 export default ngModule => {
   ngModule.config(addRadioType);
 
@@ -14,8 +16,8 @@ export default ngModule => {
       },
       apiCheck: check => ({
         templateOptions: {
-          label: check.string,
-          theme: check.string.optional
+          theme: check.oneOf(themes),
+          label: check.string
         }
       })
     })
